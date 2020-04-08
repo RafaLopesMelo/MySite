@@ -1,0 +1,42 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaLopesMelo/MySite.git"
+  },
+  "keywords": [
+    "blog",
+    "tecnologia",
+    "musica",
+    "portfolio",
+    "javascript",
+    "nodejs",
+    "html",
+    "css",
+    "programacao",
+    "backend",
+    "frontend",
+    "fullstack",
+    "programador",
+    "react",
+    "native"
+  ],
+  "author": "Rafael Lopes de Melo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaLopesMelo/MySite/issues"
+  },
+  "homepage": "https://github.com/RafaLopesMelo/MySite#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.1",
+    "knex": "^0.20.13",
+    "sqlite3": "^4.1.1"
+  }
+}
