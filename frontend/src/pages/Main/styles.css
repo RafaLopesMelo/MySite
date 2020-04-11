@@ -1,0 +1,116 @@
+.main-container {
+    color: white;
+    font-family: 'Hermit Bold';
+    background-image: url(../../assets/0_E0oXyDylhIc78F2q.jfif);
+}
+
+.right-container { 
+    width: 50vw;
+    height: 100vh;
+    margin-left: auto;
+    background: #2e3339;;
+    background: linear-gradient(270deg, rgba(46,51,57,1) 0%, rgba(46,51,57,1) 90%, rgba(46,51,57,0) 100%);
+}
+
+div.nome {
+    display: flex;
+    justify-content: center;
+}
+
+div.nome h1 {
+    font-size: 4.8rem;
+    margin-top: 35px;
+    margin-left: 10%;
+}
+
+div.nome h1.Lopes {
+    margin-top: 105px;
+    margin-left: -4%;
+}
+
+div.nome h1.Melo {
+    margin-top: 175px;
+    margin-left: -1%;
+}
+
+div.nome a {
+    animation: blinking 1.5s infinite;
+}
+
+@keyframes blinking {
+    0% { opacity: 100%; }
+    49% { opacity: 100%; }
+    50% { opacity: 0%; }
+    99% { opacity: 0%; }
+    100% { opacity: 100%; }
+}
+
+div.menu{
+    text-align: right;
+    font-size: 4em;
+    margin-top: 30%;
+    margin-right: 50px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.right-container a::before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    width: 0%;
+    transition: 1s;
+}
+
+.right-container a.portfolio:hover::before {
+    width: 23.8%;
+}
+
+.right-container a.blog:hover::before {
+    width: 13%;
+}
+
+.right-container a.contato:hover::before {
+    width: 19.3%;
+}
+
+.right-container a.portfolio::before {
+    color: #83e0ff;
+}
+
+.right-container a.blog::before {
+    color: #2ef7a0;
+}
+
+.right-container a.contato::before {
+    color: #ff4696;
+}
+
+img {
+    position: absolute;
+    width: 25%;
+    top: 40px;
+    left: 4vw;
+}
+
+.left-container h2 {
+    position: absolute;
+    font-size: 3.8rem;
+    margin-left: 10vh;
+}
+
+.left-container h2.devweb {
+    margin-top: 65vh;
+
+}
+
+.left-container h2.js {
+    margin-top: 75vh;
+}
+
+.left-container h2.fs {
+    margin-top: 85vh;
+}
