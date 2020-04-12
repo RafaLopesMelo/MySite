@@ -62,7 +62,7 @@ a {
     position: absolute;
     overflow: hidden;
     width: 0%;
-    transition: 1s;
+    transition: 1s ease-in-out;
 }
 
 .right-container a.portfolio:hover::before {

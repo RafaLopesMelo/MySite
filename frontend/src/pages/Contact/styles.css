@@ -5,14 +5,6 @@ h1 {
     margin-left: 60px;
 }
 
-h2 {
-    font-family: Hermit Bold;
-    font-size: 25pt;
-    margin-top: 1.5vh;
-    margin-left: 3vw;
-    margin-right: auto;
-}
-
 p {
     font-family: Calibri;
     font-size: 20pt;
@@ -31,28 +23,7 @@ span {
     margin-left: 10px;
 }
 
-ul.social {
-    list-style: none;
-    margin-left: auto;
-    margin-right: 3vw;
-}
-
-ul.social li {
-    display: inline-block;
-    margin-top: 1.5vh;
-    margin-right: 1vw;
-}
-
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-}
-
-.nav-contact {
+nav {
     display: flex;
     align-items: center;
     width: 100vw;
@@ -61,15 +32,13 @@ ul.social li {
     margin-bottom: auto;
 }
 
-.back-arrow {
-    color: white;
-    margin-left: 1vw;
-}
+
 
 .title {
     color: white;
     font-size: 60pt;
     margin-left: 29%;
+    margin-bottom: 20px;
 }
 
 .main-contact {
@@ -92,6 +61,10 @@ ul.social li {
     height: 70vh;
 }
 
+.contatos h1 {
+    margin-left: 5%;
+}
+
 .contatos ul {
     font-family: Calibri;
     font-size: 18pt;
@@ -110,11 +83,31 @@ ul.social li {
     color: black;
 }
 
-.footer-contact {
+footer {
     color: white;
     display: flex;
     width: 100vw;
     height: 8vh;
     background-color: #2e3339;
     margin-top: auto;
+}
+
+footer ul {
+    list-style: none;
+    margin-left: auto;
+    margin-right: 3vw;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-top: 1.5vh;
+    margin-right: 1vw;
+}
+
+footer h2 {
+    font-family: Hermit Bold;
+    font-size: 25pt;
+    margin-top: 1.5vh;
+    margin-left: 3vw;
+    margin-right: auto;
 }

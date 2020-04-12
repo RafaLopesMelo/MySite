@@ -9,8 +9,8 @@ import './styles.css'
 export default function Contact() {
 
     return (
-        <div className='contact-container'>
-            <nav className='nav-contact'>
+        <div className='container'>
+            <nav>
                 <Link to='/'><FiArrowLeftCircle  size = { 40 } className='back-arrow'/></Link><span>Back</span>
                 <h1 className='title'>Contato</h1>
             </nav>
@@ -35,9 +35,9 @@ export default function Contact() {
                     </ul>
                 </aside>
             </main>
-            <footer className='footer-contact'>
+            <footer>
                 <h2>Rafael Lopes de Melo</h2>
-                <ul className='social'>
+                <ul>
                 <li><FaWhatsapp size = { 40 }/></li>
                 <li><FaInstagram size = { 40 }/></li>
                 <li><FaTwitter size = { 40 }/></li>
