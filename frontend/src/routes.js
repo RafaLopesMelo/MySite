@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Main from './pages/Main/index';
-import Contact from './pages/Contact/index';
-import Blog from './pages/Blog/index'
+import Main from './pages/Main/main';
+import Contact from './pages/Contact/contact';
+import Blog from './pages/Blog/blog'
 
 export default function Routes() {
     return (

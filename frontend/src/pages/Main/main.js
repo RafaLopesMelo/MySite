@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import eu from '../../assets/Foto.png';
 
-import './styles.css';
+import './main.css';
 
 export default function Main() {
 

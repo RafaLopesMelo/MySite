@@ -1,0 +1,92 @@
+nav {
+    color: white;
+    font-family: Hermit Bold;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 12vh;
+    background-color: #2e3339;
+    margin-bottom: auto;
+}
+
+h2 {
+    font-size: 40pt;
+    margin-left: 10vw;
+}
+
+nav ul {
+    margin-left: auto;
+    margin-right: 6vw;
+}
+
+nav ul li{
+    font-size: 25pt;
+    display: inline;
+    margin-right: 3vw;
+}
+
+.line {
+    position: absolute;
+    left: 34vw;
+    width: 1.5px;
+    height: 6vw;
+    background-color: white;
+}
+
+/*! Animação menu hamburguer */
+
+#checkbox-menu {
+    position: absolute;
+    left: 17vw;
+    opacity: 0;
+    width: 38px;
+    height: 30px;
+}
+
+label {
+    position: relative;
+    left: 8vw;
+    display: block;
+    height: 30px;
+    width: 38px;
+}
+
+label span:nth-child(1){
+    top: 0;
+}
+
+label span:nth-child(2){
+    top: 12px;
+}
+
+label span:nth-child(3){
+    top: 24px;
+}
+
+
+label span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: white;
+    transition: 0.25s ease-in-out;
+}
+
+#checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 12px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2){
+    opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top: 12px;
+}
+
+/*! Abrir menu */
+
