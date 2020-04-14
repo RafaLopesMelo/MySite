@@ -33,6 +33,11 @@ nav ul li{
     background-color: white;
 }
 
+.back-arrow {
+    color: white;
+    margin-left: 1vw;
+}
+
 /*! Animação menu hamburguer */
 
 #checkbox-menu {

@@ -8,7 +8,7 @@ exports.up = function(knex) {
 
         table.string('author').notNullable();
 
-        table.string('illustration');
+        table.binary('illustration');
         table.string('title').notNullable();
         table.text('description').notNullable();
         table.string('content').notNullable();

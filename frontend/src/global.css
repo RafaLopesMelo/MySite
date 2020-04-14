@@ -15,6 +15,15 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100% !important;
+    height: 100%;
+}
+
 span {
     cursor: default;
 }
@@ -28,7 +37,4 @@ span {
     background-color: white;
 }
 
-.back-arrow {
-    color: white;
-    margin-left: 1vw;
-}
+
