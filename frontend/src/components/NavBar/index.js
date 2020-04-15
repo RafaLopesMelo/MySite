@@ -1,15 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 import { FiArrowLeftCircle } from 'react-icons/fi';
 
 import './styles.css';
 
-const NavBar = props => (
+const NavBar = props =>  {
 
+    return(
     <nav>
-        <Link to='/'><FiArrowLeftCircle size={40} className='back-arrow' /></Link><span>Back</span>
-        <input type="checkbox" id='checkbox-menu' />
+        <Link to='/'><FiArrowLeftCircle size={40} className='back-arrow'/><p>Exit</p></Link>
+        <input type="checkbox" id='checkbox-menu'/>
         <label htmlFor='checkbox-menu'>
             <span></span>
             <span></span>
@@ -25,6 +26,7 @@ const NavBar = props => (
             <li> >Outros </li>
         </ul>
     </nav>
-)
+    )
+}
 
 export default NavBar;

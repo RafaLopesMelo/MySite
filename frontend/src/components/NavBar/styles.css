@@ -9,6 +9,11 @@ nav {
     margin-bottom: auto;
 }
 
+p {
+    position: absolute;
+    top: -2%;
+}
+
 h2 {
     font-size: 40pt;
     margin-left: 10vw;

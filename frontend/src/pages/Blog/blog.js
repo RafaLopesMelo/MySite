@@ -1,6 +1,6 @@
 // ! Revisar margens para tirar overflow-x: hidden do global.css
-
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Footer from '../../components/Footer/index'
 import NavBar from '../../components/NavBar/index'
@@ -35,7 +35,7 @@ export default function Blog() {
                         
                         <div className='text'>
 
-                            <div className='title'><>{ post.title }</></div>
+                            <Link to={ `posts/${post.id}` } className='title'>{ post.title }</Link>
                             <div className="description"><>{ post.description }</></div>
                             <div className="date"><>{ post.date }</></div>
 

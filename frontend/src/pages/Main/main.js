@@ -26,7 +26,7 @@ export default function Main() {
 
                 <div className="menu">
                     <Link to='/portfolio'><a data-text='//Portfólio' className='portfolio'>//Portfólio</a><br/></Link>
-                    <Link to='/blog'><a data-text='//Blog' className='blog'>//Blog</a><br/></Link>
+                    <Link to='/posts'><a data-text='//Blog' className='blog'>//Blog</a><br/></Link>
                     <Link to='/contato'><a data-text='//Contato' className='contato'>//Contato</a></Link>
                 </div>
 
