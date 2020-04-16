@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
+import ReactMarkdown from 'react-markdown';
+import { MdWatchLater } from 'react-icons/md'
 
 import NavBar from '../../components/NavBar/index';
 import Footer from '../../components/Footer/index';
 
 import api from '../../services/api';
+
+import './post.css'
 
 
 export default function Post() {
@@ -13,31 +16,42 @@ export default function Post() {
 
     const [post, setPost] = useState([]);
 
-    
 
-useEffect(() => {
-    api.get(url)
-    .then(response => {
-        setPost([response.data])
+
+    useEffect(() => {
+        api.get(url)
+            .then(response => {
+                setPost([response.data])
+            })
     })
-})
 
 
-    return(
+    return (
         <div className="container">
 
-          <NavBar/>
-
-            <main>
+            <NavBar />
 
             {post.map(data => (
 
-               <div> { data.author } </div>
+                    <main>
 
-            ))}
+                        <div className="info">
+                            <MdWatchLater color='#2e3339' size={23} />
+                            <span> {data.date} </span>
+                            <span> Autor: {data.author} </span>
+                        </div>
 
-            </main>
+                        <div className="content">
 
+                            <h1 className='title'> {data.title} </h1>
+
+                            <ReactMarkdown source = { data.content } />
+
+                        </div>
+
+
+
+                    </main>))}
 
             <Footer />
 

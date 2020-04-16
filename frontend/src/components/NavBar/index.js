@@ -1,15 +1,24 @@
-import React from 'react';
-import { Link} from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { FiArrowLeftCircle } from 'react-icons/fi';
 
+import api from '../../services/api'
+
 import './styles.css';
 
-const NavBar = props =>  {
+export default function NavBar() {
+    
+    async function Home() {
+
+        useEffect()
+
+    }
 
     return(
     <nav>
-        <Link to='/'><FiArrowLeftCircle size={40} className='back-arrow'/><p>Exit</p></Link>
+
+        <Link to='/' className='link'><FiArrowLeftCircle  className='back-arrow' /><span className='exit'>Exit</span></Link>
         <input type="checkbox" id='checkbox-menu'/>
         <label htmlFor='checkbox-menu'>
             <span></span>
@@ -20,7 +29,7 @@ const NavBar = props =>  {
         <h2>Menu</h2>
         <div className='line'></div>
         <ul>
-            <li> >Home </li>
+            <li> <Link to='/posts'> >Home </Link> </li>
             <li> >Web Design </li>
             <li> >Música </li>
             <li> >Outros </li>
@@ -28,5 +37,3 @@ const NavBar = props =>  {
     </nav>
     )
 }
-
-export default NavBar;

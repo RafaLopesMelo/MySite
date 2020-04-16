@@ -10,8 +10,9 @@ exports.up = function(knex) {
 
         table.binary('illustration');
         table.string('title').notNullable();
-        table.text('description').notNullable();
-        table.string('content').notNullable();
+        table.string('description').notNullable();
+        table.text('content').notNullable();
+        table.string('category').notNullable();
 
     })
 };

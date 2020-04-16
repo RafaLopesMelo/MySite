@@ -25,7 +25,7 @@ export default function Main() {
                 </div>
 
                 <div className="menu">
-                    <Link to='/portfolio'><a data-text='//Portfólio' className='portfolio'>//Portfólio</a><br/></Link>
+                    <a data-text='//Portfólio' className='portfolio' href='https://github.com/RafaLopesMelo'><a>//Portfólio</a></a><br/>
                     <Link to='/posts'><a data-text='//Blog' className='blog'>//Blog</a><br/></Link>
                     <Link to='/contato'><a data-text='//Contato' className='contato'>//Contato</a></Link>
                 </div>

@@ -9,6 +9,16 @@ module.exports = {
         return res.json(posts);
     },
 
+    async category() {
+
+        const { category } = req.params;
+
+        const posts = await connection('posts').select('category', category);
+
+        return res.json(posts);
+
+    },
+
     async profile(req, res) {
 
         const { id } = req.params;
