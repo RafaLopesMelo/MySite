@@ -5,11 +5,8 @@ const PortfolioController = require('./controllers/PortfolioController');
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => {res.send('Main Page')});
-
 routes.get('/posts', PostsController.index);
 routes.get('/posts/:id', PostsController.profile);
-routes.get('/posts/:category', PostsController.category)
 
 routes.post('/admin/login', AdminController.login);
 routes.get('/admin/index', AdminController.index)

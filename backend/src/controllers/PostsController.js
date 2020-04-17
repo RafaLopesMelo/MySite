@@ -4,19 +4,16 @@ module.exports = {
 
     async index(req, res) {
 
-        const posts = await connection('posts').select('*');
+        const { category } = req.query;
 
+        if (category) {
+            const posts = await connection('posts').where('category', category).select('*')
+            return res.json(posts);
+        }
+
+        const posts = await connection('posts').select('*')
         return res.json(posts);
-    },
-
-    async category() {
-
-        const { category } = req.params;
-
-        const posts = await connection('posts').select('category', category);
-
-        return res.json(posts);
-
+        
     },
 
     async profile(req, res) {
@@ -32,7 +29,7 @@ module.exports = {
 
     async create(req, res) {
 
-        const {author, title, description, content, illustration} = req.body;
+        const {author, title, category, description, content, illustration} = req.body;
 
         const data = new Date;
             const dia = data.getDate().toString();
@@ -42,6 +39,7 @@ module.exports = {
 
         const [id] = await connection('posts').insert({
             author,
+            category,
             title,
             description,
             content,

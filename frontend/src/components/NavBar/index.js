@@ -1,21 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { FiArrowLeftCircle } from 'react-icons/fi';
 
-import api from '../../services/api'
-
 import './styles.css';
 
-export default function NavBar() {
-    
-    async function Home() {
-
-        useEffect()
-
-    }
+export default function NavBar() { 
 
     return(
+        
     <nav>
 
         <Link to='/' className='link'><FiArrowLeftCircle  className='back-arrow' /><span className='exit'>Exit</span></Link>
@@ -29,10 +22,10 @@ export default function NavBar() {
         <h2>Menu</h2>
         <div className='line'></div>
         <ul>
-            <li> <Link to='/posts'> >Home </Link> </li>
-            <li> >Web Design </li>
-            <li> >Música </li>
-            <li> >Outros </li>
+            <li> <Link to= '/posts' > >Home </Link> </li>
+            <li> <Link to= '/posts?category=webdesign' > >Web Design </Link></li>
+            <li> <Link to='/posts?category=musica'> >Música </Link></li>
+            <li> <Link to='/posts?category=outros'> >Outros </Link></li>
         </ul>
     </nav>
     )

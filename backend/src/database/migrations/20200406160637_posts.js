@@ -5,14 +5,14 @@ exports.up = function(knex) {
         table.increments();
 
         table.date('date').notNullable();
-
         table.string('author').notNullable();
+        table.string('category').notNullable();
 
         table.binary('illustration');
         table.string('title').notNullable();
         table.string('description').notNullable();
         table.text('content').notNullable();
-        table.string('category').notNullable();
+        
 
     })
 };

@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/index'
 import NavBar from '../../components/NavBar/index'
 
-
 import api from '../../services/api';
 
 import './blog.css'
@@ -14,12 +13,15 @@ export default function Blog() {
 
     const [posts, setPosts] = useState([]);
     
+    const url = window.location.pathname;
+    const query = window.location.search;
+      
     useEffect(() => {
-        api.get('/posts')
+        api.get(url + query)
         .then(response => {
-            setPosts(response.data)
+        setPosts(response.data)
         })
-    })       
+    })
 
     return (
         <div className='container'>

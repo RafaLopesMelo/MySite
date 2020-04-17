@@ -15,6 +15,9 @@ export default function Blog() {
 
     const [posts, setPosts] = useState([]);
 
+    const url = window.location.pathname;
+    const query = window.location.search;
+
     async function handleDeletePost(id) {
 
         let result = window.confirm('Tem certeza que deseja excluir este post?')
@@ -34,11 +37,11 @@ export default function Blog() {
         }
 
     }
-
+      
     useEffect(() => {
-        api.get('/posts')
+        api.get(url + query)
         .then(response => {
-            setPosts(response.data)
+        setPosts(response.data)
         })
     })
 
