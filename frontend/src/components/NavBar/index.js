@@ -5,7 +5,7 @@ import { FiArrowLeftCircle } from 'react-icons/fi';
 
 import './styles.css';
 
-export default function NavBar() { 
+export default function NavBar(props) { 
 
     return(
         
@@ -22,10 +22,10 @@ export default function NavBar() {
         <h2>Menu</h2>
         <div className='line'></div>
         <ul>
-            <li> <Link to= '/posts' > >Home </Link> </li>
-            <li> <Link to= '/posts?category=webdesign' > >Web Design </Link></li>
-            <li> <Link to='/posts?category=musica'> >Música </Link></li>
-            <li> <Link to='/posts?category=outros'> >Outros </Link></li>
+            <li> <Link to= { props.path + '/posts' }> >Home </Link> </li>
+            <li> <Link to= { props.path +'/posts?category=webdesign'} > >Web Design </Link></li>
+            <li> <Link to={ props.path +'/posts?category=musica'}> >Música </Link></li>
+            <li> <Link to={ props.path +'/posts?category=outros'}> >Outros </Link></li>
         </ul>
     </nav>
     )

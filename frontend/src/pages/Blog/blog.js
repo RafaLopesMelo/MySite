@@ -26,7 +26,7 @@ export default function Blog() {
     return (
         <div className='container'>
 
-            <NavBar />
+            <NavBar path=''/>
 
             <main>
                 { posts.map(post => (

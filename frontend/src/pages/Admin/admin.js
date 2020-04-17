@@ -48,7 +48,7 @@ export default function Blog() {
     return (
         <div className='container'>
 
-            <NavBar />
+            <NavBar path='/admin'/>
 
             <Link to='admin/posts/add' className='addPost'> Adicionar novo post </Link>
 
