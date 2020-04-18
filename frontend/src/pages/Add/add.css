@@ -1,0 +1,59 @@
+.add-form {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    font-family: Calibri;
+    flex-wrap: wrap;
+}
+
+.add-form * {
+    border-radius: 10px;
+    font-size: 2rem;
+}
+
+.form-title {
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 6%;
+}
+
+.add-form .author-input,
+.add-form .category-input {
+    height: 6vh;
+    margin: 0;
+}
+
+.add-form input {
+    color: black;
+    margin: 6% auto;
+    
+}
+
+.title-input {
+    width: 100%;
+    height: 8vh;
+    font-size: 4rem;
+}
+
+.description-input {
+    width: 100%;
+    height: 20vh;
+    font-size: 2rem;
+    line-height: 5vh;
+    overflow-y: hidden;
+    resize: none;
+}
+
+.illustration-input {
+    border-radius: 0;
+}
+
+.content-input {
+    width: 100%;
+    height: 20vh;
+    resize: vertical;
+}

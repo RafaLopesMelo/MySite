@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { FiArrowLeftCircle } from 'react-icons/fi';
 
-import './styles.css';
+import './navbar.css';
 
 export default function NavBar(props) { 
 

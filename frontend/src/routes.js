@@ -6,6 +6,7 @@ import Contact from './pages/Contact/contact';
 import Blog from './pages/Blog/blog';
 import Post from './pages/Post/post';
 import Admin from './pages/Admin/admin';
+import Add from './pages/Add/add'
 
 export default function Routes() {
     return (
@@ -16,7 +17,8 @@ export default function Routes() {
                 <Route path="/contato" component = { Contact } />
                 <Route path="/posts" component = { Blog } />
                 <Route path="/posts/:id" component = { Post } />
-                <Route path="/admin/posts" component = { Admin } />
+                <Route path="/admin/posts" exact component = { Admin } />
+                <Route path="/admin/posts/add" component = { Add }/>
             </Switch>
         </BrowserRouter>
 

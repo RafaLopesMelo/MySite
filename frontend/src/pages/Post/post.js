@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { MdWatchLater } from 'react-icons/md'
 
-import NavBar from '../../components/NavBar/index';
-import Footer from '../../components/Footer/index';
+import NavBar from '../../components/NavBar/navbar';
+import Footer from '../../components/Footer/footer';
 
 import api from '../../services/api';
 

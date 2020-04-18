@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FaWhatsapp, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa'
 
-import './styles.css'
+import './footer.css'
 
 const Footer = props => (
 

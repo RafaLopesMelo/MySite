@@ -2,12 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import Footer from '../../components/Footer/index'
-import NavBar from '../../components/NavBar/index'
+import Footer from '../../components/Footer/footer';
+import NavBar from '../../components/NavBar/navbar';
 
 import api from '../../services/api';
 
-import './blog.css'
+import './blog.css';
 
 export default function Blog() {
 

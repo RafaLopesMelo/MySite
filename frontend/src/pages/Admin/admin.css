@@ -13,7 +13,7 @@
     font-weight: bold;
 }
 
-main {
+.main-admin {
     display: flex;
     flex-direction: column;
     align-items: center;

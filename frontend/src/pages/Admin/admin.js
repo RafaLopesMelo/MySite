@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaTrash, FaEdit } from 'react-icons/fa'
 
-import Footer from '../../components/Footer/index'
-import NavBar from '../../components/NavBar/index'
+import Footer from '../../components/Footer/footer'
+import NavBar from '../../components/NavBar/navbar'
 
 
 import api from '../../services/api';
@@ -50,9 +50,9 @@ export default function Blog() {
 
             <NavBar path='/admin'/>
 
-            <Link to='admin/posts/add' className='addPost'> Adicionar novo post </Link>
+            <Link to='posts/add' className='addPost'> Adicionar novo post </Link>
 
-            <main>
+            <main className='main-admin'>
                 { posts.map(post => (
 
                     <div className='post-container' key={post.id}>
