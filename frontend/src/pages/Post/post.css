@@ -9,23 +9,28 @@
     height: fit-content;
 }
 
-
 main {
     display: flex;
     flex-direction: column;
 }
 
-.info {
-    margin: 2%;
+.author-date {
     display: flex;
-    width: 90%;
+    justify-content: space-between;
+    width: 50vw !important;
+    margin: 2% 0;
 }
 
-.info span {
+.author-date span {
     font-family: Calibri;
-    font-size: 15pt;
-    color: black !important;
-    margin-right: 10%;
+    font-size: 18pt;
+    color: black;
+}
+
+.clock {
+    position: relative;
+    top: 13%;
+    right: 4%;
 }
 
 .content {

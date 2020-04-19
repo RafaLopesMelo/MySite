@@ -16,8 +16,6 @@ export default function Post() {
 
     const [post, setPost] = useState([]);
 
-
-
     useEffect(() => {
         api.get(url)
             .then(response => {
@@ -29,15 +27,17 @@ export default function Post() {
     return (
         <div className="container">
 
-            <NavBar />
+            <NavBar path=''/>
 
             {post.map(data => (
 
                     <main>
 
-                        <div className="info">
-                            <MdWatchLater color='#2e3339' size={23} />
-                            <span> {data.date} </span>
+                        <div className="author-date">
+                        <span>
+                            <MdWatchLater color='#2e3339' size={23} className='clock'/>
+                             {data.date} 
+                        </span>
                             <span> Autor: {data.author} </span>
                         </div>
 

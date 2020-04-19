@@ -57,3 +57,10 @@
     height: 20vh;
     resize: vertical;
 }
+
+.btn-create-post {
+    width: 30%;
+    height: 8vh;
+    margin: 6% auto;
+    border-radius: 2px;
+}
