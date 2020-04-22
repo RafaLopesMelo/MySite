@@ -13,7 +13,7 @@ export default function NavBar(props) {
 
         <Link to='/' className='link'><FiArrowLeftCircle  className='back-arrow' /><span className='exit'>Exit</span></Link>
         <input type="checkbox" id='checkbox-menu'/>
-        <label htmlFor='checkbox-menu'>
+        <label htmlFor='checkbox-menu' className='hamburguer-menu'>
             <span></span>
             <span></span>
             <span></span>

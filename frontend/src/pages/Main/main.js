@@ -21,7 +21,7 @@ export default function Main() {
                 <div className="nome">
                     <h1 className='Rafael'>Rafael</h1>
                     <h1 className='Lopes'>Lopes</h1>
-                    <h1 className='Melo'>Melo<span>_</span></h1>
+                    <h1 className='Melo'>Melo<span className='animated-underline'>_</span></h1>
                 </div>
 
                 <div className="menu">

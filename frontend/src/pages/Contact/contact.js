@@ -13,7 +13,7 @@ export default function Contact() {
         <div className='container'>
             <nav>
                 <Link to='/'><FiArrowLeftCircle  size = { 40 } className='back-arrow'/></Link><span>Back</span>
-                <h1 className='title'>Contato</h1>
+                <h1 className='nav-title'>Contato</h1>
             </nav>
             <main className='main-contact'>
                 <div className='fale-comigo'>

@@ -60,7 +60,7 @@ nav ul li{
     height: 30px;
 }
 
-label {
+.hamburguer-menu {
     position: relative;
     left: 8vw;
     display: block;
@@ -68,20 +68,20 @@ label {
     width: 38px;
 }
 
-label span:nth-child(1){
+.hamburguer-menu span:nth-child(1){
     top: 0;
 }
 
-label span:nth-child(2){
+.hamburguer-menu span:nth-child(2){
     top: 12px;
 }
 
-label span:nth-child(3){
+.hamburguer-menu span:nth-child(3){
     top: 24px;
 }
 
 
-label span {
+.hamburguer-menu span {
     position: absolute;
     display: block;
     height: 5px;
@@ -91,16 +91,16 @@ label span {
     transition: 0.25s ease-in-out;
 }
 
-#checkbox-menu:checked + label span:nth-child(1){
+#checkbox-menu:checked + .hamburguer-menu span:nth-child(1){
     transform: rotate(-45deg);
     top: 12px;
 }
 
-#checkbox-menu:checked + label span:nth-child(2){
+#checkbox-menu:checked + .hamburguer-menu span:nth-child(2){
     opacity: 0;
 }
 
-#checkbox-menu:checked + label span:nth-child(3){
+#checkbox-menu:checked + .hamburguer-menu span:nth-child(3){
     transform: rotate(45deg);
     top: 12px;
 }

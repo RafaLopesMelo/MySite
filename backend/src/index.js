@@ -1,10 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-const routes = require("./routes");
+const routes = require('./routes');
 
 const port = process.env.PORT || 3333;
 
 const app = express();
+
+require('dotenv-safe').config({ path: '.env' });
 
 app.use(express.urlencoded({
      limit: '50mb', 

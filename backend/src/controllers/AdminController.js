@@ -1,5 +1,6 @@
 const connection = require('../database/connection');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 module.exports = {
 
@@ -16,9 +17,11 @@ module.exports = {
 
         const admin = await connection('admin').where('user', user).select('*').first();
 
+        const id = admin.id;
+
         if (!admin) {
 
-            return res.json({ error: "User not found." })
+            return res.status(400).json({ error: "User not found." })
 
         }
 
@@ -26,7 +29,8 @@ module.exports = {
 
             if (result == true) {
 
-                return res.json(admin)
+                const token = jwt.sign({ id }, process.env.SECRET)
+                return res.status(200).json({ auth: true, token})
 
             } else {
 
