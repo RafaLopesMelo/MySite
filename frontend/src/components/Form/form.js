@@ -49,7 +49,12 @@ export default function Form() {
 
         try {
 
-            await api.post('admin/posts', data)
+            const jwt = localStorage.getItem('jwt');
+
+            await api.post('/admin/posts', data, {
+                headers: {
+                    'x-access-token': jwt
+            }})
             history.push('/admin/posts')
 
         } catch {
@@ -123,5 +128,3 @@ export default function Form() {
     </main> 
     )
 }
-
-/*e => setContent(toBase64(e.target.value))*/

@@ -18,6 +18,8 @@ export default function Main() {
             </div>
             <div className='right-container'>
 
+                <Link to='/login'><strong> Login </strong></Link>
+        
                 <div className="nome">
                     <h1 className='Rafael'>Rafael</h1>
                     <h1 className='Lopes'>Lopes</h1>

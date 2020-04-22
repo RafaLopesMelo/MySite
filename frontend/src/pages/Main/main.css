@@ -12,6 +12,13 @@
     background: linear-gradient(270deg, rgba(46,51,57,1) 0%, rgba(46,51,57,1) 90%, rgba(46,51,57,0) 100%);
 }
 
+.right-container strong {
+    display: block;
+    margin-right: 2%;
+    margin-top: 2%;
+    float: right;
+}
+
 div.nome {
     display: flex;
     justify-content: center;
@@ -20,7 +27,7 @@ div.nome {
 div.nome * {
     font-size: 4.8rem;
     margin-top: 35px;
-    margin-left: 10%;
+    margin-left: 20%;
 }
 
 div.nome h1.Lopes {
@@ -93,7 +100,7 @@ a {
 img {
     position: absolute;
     width: 25%;
-    top: 40px;
+    top: 4.5vh;
     left: 4vw;
 }
 

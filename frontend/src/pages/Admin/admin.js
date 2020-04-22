@@ -18,15 +18,20 @@ export default function Blog() {
     const url = window.location.pathname;
     const query = window.location.search;
 
+    const jwt = localStorage.getItem('jwt');
+
     async function handleDeletePost(id) {
 
-        let result = window.confirm('Tem certeza que deseja excluir este post?')
+        const result = window.confirm('Tem certeza que deseja excluir este post?');
 
         if (result) {
 
             try {
 
-            await api.delete(`admin/posts/${id}`);
+            await api.delete(`admin/posts/${id}`, {
+                headers: {
+                    'x-access-token': jwt
+            }});
             setPosts(posts.filter(post => post.id !== id))
 
             } catch {
@@ -39,18 +44,21 @@ export default function Blog() {
     }
       
     useEffect(() => {
-        api.get(url + query)
+        api.get(url + query, {
+            headers: {
+                'x-access-token': jwt
+        }})
         .then(response => {
         setPosts(response.data)
         })
-    })
-
+    }) 
+    
     return (
         <div className='container'>
 
-            <NavBar path='/admin'/>
+            <NavBar path='/admin' back='/'/>
 
-            <Link to='posts/add' className='addPost'> Adicionar novo post </Link>
+            <Link to='/admin/add' className='addPost'> Adicionar novo post </Link>
 
             <main className='main-admin'>
                 { posts.map(post => (

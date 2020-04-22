@@ -45,17 +45,15 @@ module.exports = {
 
     async register (req, res) {
 
-        let { user, password } = req.body;
+        const { user, password } = req.body;
 
         if (user.indexOf(' ') == -1) {
 
             bcrypt.hash(password, 10, async function(err, hash){
 
-            password = hash;
-
             await connection('admin').insert({ user, password })
 
-            return res.json({ user, password });
+            return res.json({ user, password: hash });
 
         })} else {
 

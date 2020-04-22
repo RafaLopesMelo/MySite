@@ -12,12 +12,21 @@ import './post.css'
 
 export default function Post() {
 
+    const jwt = localStorage.getItem('jwt');
+
     const url = window.location.pathname;
 
     const [post, setPost] = useState([]);
 
+    
+
     useEffect(() => {
-        api.get(url)
+
+        api.get(url, {
+            headers: {
+                "x-access-token": jwt
+            }
+        })
             .then(response => {
                 setPost([response.data])
             })
@@ -27,7 +36,7 @@ export default function Post() {
     return (
         <div className="container">
 
-            <NavBar path=''/>
+            <NavBar path='' back='/posts'/>
 
             {post.map(data => (
 

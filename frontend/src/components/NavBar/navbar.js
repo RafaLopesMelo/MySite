@@ -11,7 +11,7 @@ export default function NavBar(props) {
         
     <nav>
 
-        <Link to='/' className='link'><FiArrowLeftCircle  className='back-arrow' /><span className='exit'>Exit</span></Link>
+        <Link to= { props.back } className='link'><FiArrowLeftCircle  className='back-arrow'/><span className='exit'>Back</span></Link>
         <input type="checkbox" id='checkbox-menu'/>
         <label htmlFor='checkbox-menu' className='hamburguer-menu'>
             <span></span>

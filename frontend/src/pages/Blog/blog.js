@@ -15,9 +15,15 @@ export default function Blog() {
     
     const url = window.location.pathname;
     const query = window.location.search;
+
+    const jwt = localStorage.getItem('jwt');
       
     useEffect(() => {
-        api.get(url + query)
+        api.get(url + query, {
+            headers: {
+                'x-access-token': jwt
+            }
+        })
         .then(response => {
         setPosts(response.data)
         })
@@ -26,7 +32,7 @@ export default function Blog() {
     return (
         <div className='container'>
 
-            <NavBar path=''/>
+            <NavBar path='' back='/'/>
 
             <main>
                 { posts.map(post => (

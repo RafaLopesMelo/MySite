@@ -12,7 +12,8 @@ export default function AdminForm(props) {
     const [ user, setUser ] = useState('');
     const [ password, setPassword ] = useState('');
 
-    async function handleFunction() {
+    async function handleFunction(e) {
+        e.preventDefault();
 
         if(props.action === 'login') {
            return handleLogin();
@@ -20,16 +21,14 @@ export default function AdminForm(props) {
         return handleRegister();
     }
 
-    async function handleLogin(e) {
-
-        e.preventDefault()
+    async function handleLogin() {
 
         const LoginData = {user, password}
 
         try{
 
             await api.post('/login', LoginData)
-            .then(response => localStorage.setItem('token', response.data.token))
+            .then(response => localStorage.setItem('jwt', response.data.token))
 
             history.push('/admin/posts')
 
@@ -38,8 +37,27 @@ export default function AdminForm(props) {
         }
     }
 
-    async function handleRegister(e) {
+    async function handleRegister() {
 
+        const RegisterData = { user, password }
+        const jwt = localStorage.getItem('jwt')
+
+        try {
+
+            await api.post('/admin/register', RegisterData, {
+                headers: {
+                    'x-access-token': jwt,
+                    'Content-Type': 'application/json'
+            }})
+
+            history.push('/admin/posts')
+            alert('Administrador cadastrado com sucesso!')
+
+        } catch {
+
+            alert('Erro ao cadastrar administrador, tente novamente.')
+
+        }
     }
 
     return(
@@ -47,7 +65,7 @@ export default function AdminForm(props) {
 
             <main className='login-main'>
 
-                <h1 className='login-h1'>Login como administrador</h1>
+                <h1 className='login-h1'>{ props.text }</h1>
 
                 <form className='login-form'>
 
