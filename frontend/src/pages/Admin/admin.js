@@ -1,11 +1,11 @@
 // ! Revisar margens para tirar overflow-x: hidden do global.css
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaTrash, FaEdit } from 'react-icons/fa'
+import { FaTrash, FaEdit } from 'react-icons/fa';
 
-import Footer from '../../components/Footer/footer'
-import NavBar from '../../components/NavBar/navbar'
-
+import Footer from '../../components/Footer/footer';
+import NavBar from '../../components/NavBar/navbar';
+import BackNextButton from '../../components/BackNextButton/index';
 
 import api from '../../services/api';
 
@@ -19,6 +19,8 @@ export default function Blog() {
     const query = window.location.search;
 
     const jwt = localStorage.getItem('jwt');
+
+    const [ counter, setCounter ] = useState();
 
     async function handleDeletePost(id) {
 
@@ -50,8 +52,9 @@ export default function Blog() {
         }})
         .then(response => {
         setPosts(response.data)
+        setCounter(response.headers.counter)  
         })
-    }) 
+    }, [ jwt, query, url ]) 
     
     return (
         <div className='container'>
@@ -83,6 +86,7 @@ export default function Blog() {
 
             </main>
 
+            <BackNextButton counter = { counter }/>
 
             <Footer />
 

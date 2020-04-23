@@ -16,6 +16,11 @@ app.use(express.urlencoded({
 
 app.use(cors());
 
+app.use(function(req, res, next) {
+    res.header('Access-Control-Expose-Headers', 'Counter');
+    next();
+})
+
 app.use('/admin', VerifyJWT)
 
 app.use(express.json({  

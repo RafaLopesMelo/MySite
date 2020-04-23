@@ -60,11 +60,6 @@ div.menu{
     margin-right: 50px;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
-
 .right-container a::before {
     content: attr(data-text);
     position: absolute;

@@ -4,16 +4,33 @@ module.exports = {
 
     async index(req, res) {
 
-        const { category } = req.query;
+        const { page = 1 } = req.query;
+
+        const { category = "" } = req.query;
+
 
         if (category) {
-            const posts = await connection('posts').where('category', category).select('*')
+            const posts = await connection('posts')  
+            .where('category', category)
+            .limit(10)
+            .offset((page - 1) * 10)  
+            .select('*')
+
+            await connection('posts').where('category', category).count('id as count')
+            .then(response => res.header('Counter',response[0].count))
+
             return res.json(posts);
         }
 
-        const posts = await connection('posts').select('*')
-        return res.json(posts);
-        
+        const posts = await connection('posts')
+        .limit(10)
+        .offset((page - 1) * 10) 
+        .select('*')
+
+        await connection('posts').count('id as count')
+        .then(response => res.header('Counter',response[0].count))
+
+        return  res.json(posts)
     },
 
     async profile(req, res) {

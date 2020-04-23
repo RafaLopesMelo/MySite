@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Footer from '../../components/Footer/footer';
 import NavBar from '../../components/NavBar/navbar';
+import BackNextButton from '../../components/BackNextButton/index'
 
 import api from '../../services/api';
 
@@ -11,10 +12,15 @@ import './blog.css';
 
 export default function Blog() {
 
+
     const [posts, setPosts] = useState([]);
+    
+    const [ counter, setCounter ] = useState();
     
     const url = window.location.pathname;
     const query = window.location.search;
+
+    
 
     const jwt = localStorage.getItem('jwt');
       
@@ -26,8 +32,12 @@ export default function Blog() {
         })
         .then(response => {
         setPosts(response.data)
+        setCounter(response.headers.counter)  
         })
-    })
+
+    }, [ jwt, query, url ])
+
+    
 
     return (
         <div className='container'>
@@ -53,8 +63,9 @@ export default function Blog() {
 
             </main>
 
+            <BackNextButton counter = { counter }/>
 
-            <Footer />
+            <Footer/>
 
         </div>
     )

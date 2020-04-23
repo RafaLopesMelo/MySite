@@ -9,11 +9,6 @@
     height: fit-content;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-}
-
 .author-date {
     display: flex;
     justify-content: space-between;

@@ -28,7 +28,6 @@ export default function Contact() {
                     <h1>Contatos:</h1>
                     <ul>
                         <li>E-mail: <a href='mailto: rafaelmelo.programmer@gmail.com'>rafaelmelo.programmer@gmail.com</a></li>
-                        <li>WhatsApp: (11)96720-4747</li>
                         <li>Instagram: <a href='https://www.instagram.com/rafa.lopesmelo/'>rafa.lopesmelo</a></li>
                         <li>Twitter: <a href='https://twitter.com/RafaScriptMelo'>@RafaScriptMelo</a></li>
                         <li>GitHub: <a href='https://github.com/RafaLopesMelo'>RafaLopesMelo</a></li>
