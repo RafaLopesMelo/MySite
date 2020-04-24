@@ -2,13 +2,13 @@
 exports.up = function(knex) {
     return knex.schema.createTable('posts', function(table){
 
-        table.increments();
+        table.increments('id');
 
-        table.date('date').notNullable();
+        table.string('date').notNullable();
         table.string('author').notNullable();
         table.string('category').notNullable();
 
-        table.binary('illustration');
+        table.varchar('illustration');
         table.string('title').notNullable();
         table.string('description').notNullable();
         table.text('content').notNullable();

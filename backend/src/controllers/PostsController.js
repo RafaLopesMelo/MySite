@@ -50,19 +50,20 @@ module.exports = {
 
         const data = new Date;
             const dia = data.getDate().toString();
-            const mes  = (data.getMonth()+1).toString();
-            const ano = data.getFullYear();
+            const mes = (data.getMonth()+1).toString();
+            const ano = data.getFullYear().toString();
         const date = `${dia}/${mes}/${ano}`;
 
-        const [id] = await connection('posts').insert({
+        const [id] = await connection('posts')
+        .insert({
             author,
             category,
             title,
             description,
             content,
             illustration,
-            date
-        })
+            date,
+        }).returning('id')
 
         return res.json({ id, date });
     },
