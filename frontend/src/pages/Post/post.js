@@ -40,7 +40,7 @@ export default function Post() {
 
             {post.map(data => (
 
-                    <main>
+                    <main className='Display'>
 
                         <div className="author-date">
                         <span>
