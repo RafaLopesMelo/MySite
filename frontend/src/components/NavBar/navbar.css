@@ -2,108 +2,155 @@ nav {
     color: white;
     font-family: Hermit Bold;
     display: flex;
-    align-items: center;
     width: 100vw;
-    height: 12vh;
     background-color: #2e3339;
-    margin-bottom: auto;
+    justify-content: space-between;
 }
 
-h2 {
-    font-size: 40pt;
-    margin-left: 10vw;
+nav .menu-list {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    height: 12vh;
+    border-left: 2px solid white;
+    font-size: 6rem;
 }
 
-nav ul {
-    margin-left: auto;
-    margin-right: 6vw;
+nav .menu-list ul {
+    display: flex;
+    list-style: none;
 }
 
-nav ul li{
-    font-size: 25pt;
-    display: inline;
-    margin-right: 3vw;
+nav .menu-list ul li{
+    margin: auto 3vw;
+    text-align: center;
 }
 
-.line {
-    position: absolute;
-    left: 34vw;
-    width: 1.5px;
-    height: 6vw;
-    background-color: white;
+.navbar-left-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.back-arrow {
-    color: white;
-    margin-left: 1vw;
-    width: 3rem;
-    height: 3rem;
+.navbar-left-container h2 {
+    margin-right: 5rem;
+    font-size: 8rem;
 }
 
-.exit {
-    text-indent: 0;
-    margin-top: 4%;
-    cursor: pointer;
-}
-
-.link {
+.navbar-left-container a {
     display: flex;
 }
 
-/*! Animação menu hamburguer */
-
-#checkbox-menu {
-    position: absolute;
-    left: 17vw;
-    opacity: 0;
-    width: 38px;
-    height: 30px;
+.back-arrow {
+    margin-left: 2vw;
+    font-size: 8rem;
 }
 
-.hamburguer-menu {
-    position: relative;
-    left: 8vw;
-    display: block;
-    height: 30px;
-    width: 38px;
-}
-
-.hamburguer-menu span:nth-child(1){
-    top: 0;
-}
-
-.hamburguer-menu span:nth-child(2){
-    top: 12px;
-}
-
-.hamburguer-menu span:nth-child(3){
-    top: 24px;
+.back-arrow-text {
+    color: white;
+    text-indent: 0;
+    cursor: pointer;
+    font-size: 6rem;
 }
 
 
-.hamburguer-menu span {
-    position: absolute;
-    display: block;
-    height: 5px;
-    width: 100%;
-    border-radius: 30px;
-    background-color: white;
-    transition: 0.25s ease-in-out;
-}
+@media (max-width: 860px) {
 
-#checkbox-menu:checked + .hamburguer-menu span:nth-child(1){
-    transform: rotate(-45deg);
-    top: 12px;
-}
+    .back-arrow {
+        font-size: 12rem;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
 
-#checkbox-menu:checked + .hamburguer-menu span:nth-child(2){
-    opacity: 0;
-}
+    .back-arrow-text {
+        font-size: 9.5rem;
+        margin-top: 5px;
+    }
 
-#checkbox-menu:checked + .hamburguer-menu span:nth-child(3){
-    transform: rotate(45deg);
-    top: 12px;
-}
+    nav .menu-list {
+        border: none;
+        width: 100%;
+    }
 
-/*! Abrir menu */
+    nav .menu-list ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        width: 50px;
+        height: 30px;
+        margin: 20px 40px auto auto;
+    }
+
+    .one,
+    .two,
+    .three {
+        background-color: white;
+        border-radius: 5px;
+        height: 8px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3s;
+    }
+
+    /* Clicked hamburguer menu */
+
+    .menu-list {
+        position: absolute;
+        top: 0;
+        left: -100;
+
+        height: 10vh;
+        width: 100vw;
+        transition-duration: 1s;
+    }
+
+    .menu-list.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        z-index: 10;
+
+        background-color: #2e3339;
+    }
+
+    .menu-list.on ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15vh;
+    }
+
+    .menu-list.on ul li {
+        width: 50vw;
+        font-size: 10rem;
+    }
+
+    .menu-list.on ul li:hover {
+        background-color: #404750;
+        border-radius: 5px;
+    }
+
+    .menu-list.on .menu-toggle {
+        position: absolute;
+        right: 0;
+    }
+
+    .menu-list.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-list.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu-list.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(14px, -12px);
+    }
+
+}
 

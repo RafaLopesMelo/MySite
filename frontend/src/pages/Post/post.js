@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { MdWatchLater } from 'react-icons/md'
 
 import NavBar from '../../components/NavBar/navbar';
-import Footer from '../../components/Footer/footer';
+import Footer from '../../components/Footer/index';
 
 import api from '../../services/api';
 

@@ -16,7 +16,7 @@
 }
 
 html {
-    overflow-x: hidden;
+    font-size: 62.5%;
 }
 
 main {
@@ -50,3 +50,35 @@ a {
 }
 
 
+
+@media (max-width: 2121px) {
+
+    html {
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width: 1850px) {
+
+    html {
+        font-size: 45%;
+    }
+
+}
+
+@media (max-width: 1530px) {
+
+    html {
+        font-size: 35%;
+    }
+
+}
+
+@media (max-width: 1185px) {
+
+    html {
+        font-size: 30%;
+    }
+
+}

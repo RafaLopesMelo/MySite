@@ -2,7 +2,7 @@
     display: flex;
     margin-bottom: 4%;
     margin-top: -2%;
-    font-size: 3rem;
+    font-size: 8rem;
     width: 25%;
     justify-content: space-between;
 }
@@ -13,5 +13,5 @@
 }
 
 .back:hover, .next:hover {
-    font-size: 3.5rem;
+    font-size: 8.5rem;
 }

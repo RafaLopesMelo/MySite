@@ -1,9 +1,8 @@
-// ! Revisar margens para tirar overflow-x: hidden do global.css
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaTrash, FaEdit } from 'react-icons/fa';
 
-import Footer from '../../components/Footer/footer';
+import Footer from '../../components/Footer/index';
 import NavBar from '../../components/NavBar/navbar';
 import BackNextButton from '../../components/BackNextButton/index';
 

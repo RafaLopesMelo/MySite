@@ -1,0 +1,38 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 8vh;
+    padding: 1.5vh 3vh 0;
+    background-color: #2e3339;
+    color: white;
+    margin-top: auto;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-right: 1vw;
+}
+
+footer h2 {
+    font-family: Hermit Bold;
+    font-size: 8em;
+}
+
+@media (max-width: 700px) {
+
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    footer ul li {
+        margin-right: 6vw;
+        margin-bottom: 0.2vh;
+    }
+
+    footer h2 {
+        text-align: center;
+    }
+
+}
