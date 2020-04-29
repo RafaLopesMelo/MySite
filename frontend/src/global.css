@@ -82,3 +82,29 @@ a {
     }
 
 }
+
+@media (max-width: 1050px) {
+
+    html {
+        font-size: 25%;
+    }
+
+}
+
+@media (max-width: 950px) {
+    html {
+        font-size: 20%;
+    }
+}
+
+@media (max-width: 780px) {
+    html {
+    font-size: 15%;
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 12%
+    }
+}

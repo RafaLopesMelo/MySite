@@ -9,15 +9,17 @@ export default function Main() {
 
 
     return (
+
         <div className='main-container'>
+
             <div className='left-container'>
                 <img src= { eu } alt="Eu" />
                 <h2 className='devweb'>Desenvolvedor Web</h2>
                 <h2 className='js'>Programador JavaScript</h2>
                 <h2 className='fs'>Full-stack</h2>
             </div>
-            <div className='right-container'>
 
+            <div className='right-container'>
                 <Link to='/login'><strong> Login </strong></Link>
         
                 <div className="nome">
@@ -27,12 +29,13 @@ export default function Main() {
                 </div>
 
                 <div className="menu">
-                    <a data-text='//Portfólio' className='portfolio' href='https://github.com/RafaLopesMelo'><a>//Portfólio</a></a><br/>
-                    <Link to='/posts'><a data-text='//Blog' className='blog'>//Blog</a><br/></Link>
-                    <Link to='/contato'><a data-text='//Contato' className='contato'>//Contato</a></Link>
+                    <a data-text='//Portfólio' className='portfolio' href='https://github.com/RafaLopesMelo'>//Portfólio</a><br/>
+                    <a data-text='//Blog' className='blog' href="/posts">//Blog</a><br/>
+                    <a data-text='//Contato' className='contato' href="/contato">//Contato</a>
                 </div>
 
             </div>
         </div>
+
     );
 }

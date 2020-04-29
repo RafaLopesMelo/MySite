@@ -11,11 +11,13 @@ export default function Contact() {
 
     return (
         <div className='container'>
-            <nav>
-                <Link to='/'><FiArrowLeftCircle  size = { 40 } className='back-arrow'/></Link><span>Back</span>
+            <nav className="contact-navbar">
+                <Link to='/'><FiArrowLeftCircle className='back-arrow'/>
+                    <span className="back-arrow-text">Back</span>
+                </Link>
                 <h1 className='nav-title'>Contato</h1>
             </nav>
-            <main className='main-contact'>
+            <div className='main-contact'>
                 <div className='fale-comigo'>
                     <h1>Fale Comigo!</h1>
                     <p>Entrar em contato comigo é simples, caso queira ou precise falar comigo, seja para proposta, sugestão, dúvida,
@@ -34,7 +36,7 @@ export default function Contact() {
                         <li>LinkedIn: <a href='https://www.linkedin.com/in/rafael-lopes-de-melo-4506a81a5'>Rafael Lopes de Melo</a></li>
                     </ul>
                 </aside>
-            </main>
+            </div>
 
             <Footer />
 

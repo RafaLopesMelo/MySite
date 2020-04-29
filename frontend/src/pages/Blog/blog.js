@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import Footer from '../../components/Footer/index';
 import NavBar from '../../components/NavBar/navbar';
-import BackNextButton from '../../components/BackNextButton/index'
+import BackNextButton from '../../components/BackNextButton/index';
+import DisplayPosts from '../../components/DisplayPosts/index';
 
 import api from '../../services/api';
 
@@ -46,19 +46,9 @@ export default function Blog() {
             <main>
                 { posts.map(post => (
 
-                    <div className='post-container' key={post.id}>
-                        <div className='illustration' style={{ backgroundImage:  post.illustration  }}></div>
-                            
-                        
-                        <div className='text'>
+                    <DisplayPosts post={ post }/> 
 
-                            <Link to={ `posts/${post.id}` } className='title'>{ post.title }</Link>
-                            <div className="description"><>{ post.description }</></div>
-                            <div className="date"><>{ post.date }</></div>
-
-                        </div>
-
-                </div>))}
+                ))}
 
             </main>
 

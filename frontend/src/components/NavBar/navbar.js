@@ -23,7 +23,7 @@ export default function NavBar(props) {
 
     return (
 
-        <nav>
+        <nav className="navbar">
 
             <div className="navbar-left-container">
 
