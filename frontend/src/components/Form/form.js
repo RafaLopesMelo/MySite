@@ -19,15 +19,12 @@ export default function Form() {
     
     function toBase64(file) {
 
-        console.log(file instanceof Blob)
 
         const reader = new FileReader();
 
         reader.readAsDataURL(file);
 
         reader.onloadend = function() {
-
-            console.log(`url('${reader.result}')`)
 
             setIllustration(`url('${reader.result}')`);
     

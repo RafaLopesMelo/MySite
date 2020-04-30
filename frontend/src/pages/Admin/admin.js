@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaTrash, FaEdit } from 'react-icons/fa';
 
 import Footer from '../../components/Footer/index';
 import NavBar from '../../components/NavBar/navbar';
+import DisplayPosts from '../../components/DisplayPosts/index'
 import BackNextButton from '../../components/BackNextButton/index';
 
 import api from '../../services/api';
@@ -62,30 +62,8 @@ export default function Blog() {
 
             <Link to='/admin/add' className='addPost'> Adicionar novo post </Link>
 
-            <main className='main-admin'>
-                { posts.map(post => (
+            <DisplayPosts />
 
-                    <div className='post-container' key={post.id}>
-                        <div className='illustration' style={{ backgroundImage:  post.illustration  }}></div>
-
-
-                        <div className='text'>
-
-                            <div className='info'>
-                            <Link to={ `posts/${post.id}` } className='title'> { post.title } </Link>
-                            <FaTrash className='trash' size = { 20 } color='rgb(228, 34, 34)' onClick= { () => handleDeletePost(post.id) } />
-                            <Link> <FaEdit size = { 20 }  color= 'rgb(110, 110, 233)' /> </Link>
-                            </div>
-                            <div className="description"><>{ post.description }</></div>
-                            <div className="date"><>{ post.date }</></div>
-
-                        </div>
-
-                </div>))}
-
-            </main>
-
-            <BackNextButton counter = { counter }/>
 
             <Footer />
 

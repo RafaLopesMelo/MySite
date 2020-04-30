@@ -13,7 +13,7 @@ export default function Main() {
         <div className='main-container'>
 
             <div className='left-container'>
-                <img src= { eu } alt="Eu" />
+                <img src= { eu } alt="Eu" className="eu"/>
                 <h2 className='devweb'>Desenvolvedor Web</h2>
                 <h2 className='js'>Programador JavaScript</h2>
                 <h2 className='fs'>Full-stack</h2>

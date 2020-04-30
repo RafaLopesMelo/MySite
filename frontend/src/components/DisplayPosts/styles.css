@@ -1,10 +1,12 @@
-.post-container,
-.illustration,
-.text {
-    border: rgba(0, 0, 0, 0.1) 0.5px solid;
+.posts-organization {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80vw;
+    margin: 10vh auto;
 }
 
-div.post-container {
+.post-container {
     font-family: Calibri;
     word-wrap: break-word;
     display: flex;
@@ -13,43 +15,56 @@ div.post-container {
     flex-flow: row wrap;
     padding: 1.5% 0;
     width: 35vw;
+    min-height: 25vh;
     min-width: 300px;
-    margin-bottom: 2vh;
+    margin-bottom: 5vh;
+    transition-duration: 1s;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.post-container:hover {
+    transform: scale(1.1);
 }
 
 .illustration {
-    width: 40%;
-    height: 100%;
-    max-height: 20vh;
-    background-size: 100%;
+    max-width: 30%;
+    width: fit-content;
+    max-height: 100%;
+}
+
+.illustration img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .title  {
     display: inline;
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: bold;
     color: black;
-    margin: 0;
+    margin: auto;
 }
 
 .title:hover  {
-    font-size: 6.5rem;
+    font-size: 4.1rem;
 }
 
 .text {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    height: 20vh;
+    margin-bottom: auto;
+    width: 60%;
+    max-height: 20vh;
     padding: 10px;
 }
 
 .text .description {
     width: 100%;
     height: 70%;
-    margin-top: 5px;
+    margin-top: 10px;
     text-indent: 5%;
-    font-size: 16pt;
+    font-size: 2.5rem;
 }
 
 .date {
@@ -58,4 +73,24 @@ div.post-container {
     margin-left: auto;
     text-align: center;
     display: none;
+}
+
+.icons {
+    display: inline;
+    min-width: 13%;
+    margin: auto 2% 0 auto;
+    font-size: 4rem;
+}
+
+.trash {
+    margin-right: 15%;
+    cursor: pointer;
+}
+
+.trash:hover, .edit:hover {
+    font-size: 4.2rem;
+}
+
+.BackNextButton {
+    margin: 0 auto;
 }

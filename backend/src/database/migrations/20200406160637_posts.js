@@ -8,7 +8,7 @@ exports.up = function(knex) {
         table.string('author').notNullable();
         table.string('category').notNullable();
 
-        table.varchar('illustration');
+        table.text('illustration');
         table.string('title').notNullable();
         table.string('description').notNullable();
         table.text('content').notNullable();

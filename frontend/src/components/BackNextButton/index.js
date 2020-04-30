@@ -15,7 +15,6 @@ export default function BackNextButton(props) {
     const counter = props.counter;
     
     const page = UrlParams.get('page') == null ? 1 : parseInt(UrlParams.get('page'))
-    console.log(page)
 
     if ( counter <= 10) {
 
