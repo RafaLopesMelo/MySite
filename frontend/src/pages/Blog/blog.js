@@ -5,56 +5,58 @@ import NavBar from '../../components/NavBar/navbar';
 import BackNextButton from '../../components/BackNextButton/index';
 import DisplayPosts from '../../components/DisplayPosts/index';
 
-import api from '../../services/api';
+import './styles.css';
 
-import './blog.css';
+import api from '../../services/api';
 
 export default function Blog() {
 
 
     const [posts, setPosts] = useState([]);
-    
-    const [ counter, setCounter ] = useState();
-    
+
+    const [counter, setCounter] = useState();
+
     const url = window.location.pathname;
     const query = window.location.search;
 
-    
+
 
     const jwt = localStorage.getItem('jwt');
-      
+
     useEffect(() => {
         api.get(url + query, {
             headers: {
                 'x-access-token': jwt
             }
         })
-        .then(response => {
-        setPosts(response.data)
-        setCounter(response.headers.counter)  
-        })
+            .then(response => {
+                setPosts(response.data)
+                setCounter(response.headers.counter)
+            })
 
-    }, [ jwt, query, url ])
+    }, [jwt, query, url])
 
-    
+
 
     return (
-        <div className='container'>
+        <div>
 
-            <NavBar path='' back='/'/>
+            <NavBar path='' back='/' />
 
-            <main>
-                { posts.map(post => (
+            <div className="posts-organization">
 
-                    <DisplayPosts post={ post }/> 
+                {posts.map(post => (
+
+                    <DisplayPosts post={post} />
 
                 ))}
 
-            </main>
 
-            <BackNextButton counter = { counter }/>
+            </div>
 
-            <Footer/>
+            <BackNextButton counter={counter} className="BackNextButton"/>
+
+            <Footer />
 
         </div>
     )

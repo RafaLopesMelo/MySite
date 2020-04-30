@@ -1,9 +1,9 @@
 .back-next {
     display: flex;
-    margin-bottom: 4%;
-    margin-top: -2%;
-    font-size: 8rem;
+    margin: auto auto 8vh auto ;
+    font-size: 25pt;
     width: 25%;
+    min-width: 200px;
     justify-content: space-between;
 }
 
@@ -13,5 +13,5 @@
 }
 
 .back:hover, .next:hover {
-    font-size: 8.5rem;
+    font-size: 28pt;
 }
