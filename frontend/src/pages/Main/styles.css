@@ -5,6 +5,7 @@
     font-family: 'Hermit Bold';
     background-image: url(../../assets/0_E0oXyDylhIc78F2q.jfif);
     background-size: 100%;
+    text-shadow: 1px 1px 3px #fff;
 }
 
 .right-container { 
@@ -21,6 +22,11 @@
     margin-right: 2%;
     margin-top: 2%;
     float: right;
+}
+
+.right-container strong:hover {
+    font-size: 4.2rem;
+    color: rgb(245, 245, 245);
 }
 
 div.nome {

@@ -9,6 +9,7 @@
     color: white;
     font-family: Hermit bold;
     font-size: 6rem;
+    text-shadow: 1px 1px 3px #fff;
 }
 
 .contact-navbar a {
@@ -28,6 +29,12 @@
     cursor: pointer;
     font-size: 6rem;
 }
+
+.back-arrow-text:hover {
+    font-size: 6.2rem;
+    color: rgb(245, 245, 245);
+}
+
 /* Main */
 
 .main-contact {

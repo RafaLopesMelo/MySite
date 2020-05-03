@@ -15,7 +15,6 @@
     width: 80vw;
     height: 12vh;
     border-left: 2px solid white;
-    font-size: 6rem;
 }
 
 .navbar .menu-list ul {
@@ -26,6 +25,16 @@
 .navbar .menu-list ul li{
     margin: auto 3vw;
     text-align: center;
+}
+
+.navbar .menu-list ul li a{
+    font-size: 6rem;
+    text-shadow: 1px 1px 3px #fff;
+}
+
+.navbar .menu-list ul li a:hover {
+    font-size: 6.2rem;
+    color: rgb(245, 245, 245);
 }
 
 .navbar-left-container {
@@ -45,10 +54,17 @@
 }
 
 .back-arrow-text {
+    margin-left: 2%;
     color: white;
     text-indent: 0;
     cursor: pointer;
     font-size: 6rem;
+    text-shadow: 1px 1px 3px #fff;
+}
+
+.back-arrow-text:hover {
+    font-size: 6.2rem;
+    color: rgb(245, 245, 245);
 }
 
 

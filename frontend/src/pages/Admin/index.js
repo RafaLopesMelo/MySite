@@ -7,7 +7,6 @@ import DisplayPosts from '../../components/DisplayPosts'
 
 import api from '../../services/api';
 
-import './styles.css'
 
 export default function Blog() {
 

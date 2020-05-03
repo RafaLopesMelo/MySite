@@ -6,9 +6,7 @@ import { FiArrowLeftCircle } from 'react-icons/fi';
 import './styles.css';
 import { useState } from 'react';
 
-export default function NavBar(props) {
-
-    
+export default function NavBar(props) {    
 
     const [ show, setShow ] = useState(true);
 
