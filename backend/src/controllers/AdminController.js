@@ -15,21 +15,17 @@ module.exports = {
 
         const { user, password } = req.body;
 
-        const admin = await connection('admin').where('user', user).select('*').first();
-
-        const id = admin.id;
-
-        if (!admin) {
+        if (user != process.env.ADMIN_USER) {
 
             return res.status(400).json({ error: "User not found." })
 
         }
 
-        bcrypt.compare(password, admin.password, function(err, result) {
+        bcrypt.compare(password, process.env.ADMIN_PW, function(err, result) {
 
             if (result == true) {
 
-                const token = jwt.sign({ id }, process.env.SECRET)
+                const token = jwt.sign({ password }, process.env.SECRET)
                 return res.status(200).json({ auth: true, token})
 
             } else {

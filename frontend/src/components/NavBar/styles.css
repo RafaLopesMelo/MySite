@@ -1,0 +1,153 @@
+.navbar {
+    color: white;
+    font-family: Hermit Bold;
+    display: flex;
+    max-width: 100vw;
+    min-height: 8vh;
+    margin-bottom: auto;
+    background-color: #2e3339;
+    justify-content: space-between;
+}
+
+.navbar .menu-list {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    height: 12vh;
+    border-left: 2px solid white;
+    font-size: 6rem;
+}
+
+.navbar .menu-list ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .menu-list ul li{
+    margin: auto 3vw;
+    text-align: center;
+}
+
+.navbar-left-container {
+    display: flex;
+    width: 20vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-left-container a {
+    display: flex;
+}
+
+.back-arrow {
+    margin-left: 2vw;
+    font-size: 8rem;
+}
+
+.back-arrow-text {
+    color: white;
+    text-indent: 0;
+    cursor: pointer;
+    font-size: 6rem;
+}
+
+
+@media (max-width: 860px) {
+
+    .back-arrow {
+        font-size: 12rem;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+
+    .back-arrow-text {
+        font-size: 9.5rem;
+        margin-top: 5px;
+    }
+
+    .navbar .menu-list {
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .navbar .menu-list ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        width: 50px;
+        margin: 6px 40px auto auto;
+    }
+
+    .one,
+    .two,
+    .three {
+        background-color: white;
+        border-radius: 5px;
+        height: 8px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3s;
+    }
+
+    /* Clicked hamburguer menu */
+
+    .menu-list {
+        position: absolute;
+        top: 0;
+        left: -100;
+        height: 10vh;
+        width: 100vw;
+        transition-duration: 1s;
+    }
+
+    .menu-list.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        z-index: 10;
+
+        background-color: #2e3339;
+    }
+
+    .menu-list.on ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15vh;
+    }
+
+    .menu-list.on ul li {
+        width: 50vw;
+        font-size: 10rem;
+    }
+
+    .menu-list.on ul li:hover {
+        background-color: #404750;
+        border-radius: 5px;
+    }
+
+    .menu-list.on .menu-toggle {
+        position: absolute;
+        right: 0;
+    }
+
+    .menu-list.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-list.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu-list.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(14px, -12px);
+    }
+
+}
+

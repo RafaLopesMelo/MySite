@@ -57,7 +57,7 @@ export default function DisplayPosts(props) {
                 {url === '/posts' &&
 
                     <div className="icons">
-                        <FaTrash className="trash" color='rgb(228, 34, 34)' />
+                        <FaTrash className="trash" color='rgb(228, 34, 34)' onClick= { props.handleDeletePosts }/>
                         <Link> <FaEdit className="edit" color='rgb(110, 110, 233)' /> </Link>
                     </div>
 
